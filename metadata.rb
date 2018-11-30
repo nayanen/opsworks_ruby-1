@@ -10,14 +10,10 @@ version '1.13.0'
 chef_version '~> 12.0' if respond_to?(:chef_version)
 
 depends 'apt', '< 7.0'
-depends 'nginx'
-depends 'logrotate'
-depends 'ruby-ng'
-depends 's3_file'
-depends 'sudo'
+
 
 # indirect dependency, but breaks against the chef_version if updated to 3.1.0
-depends 'seven_zip', '~> 2.0'
+
 # indirect dependency required to maintain compatibility with chef 12
 depends 'windows', '< 5.0'
 
